@@ -10,8 +10,7 @@ scikit-learn
 requests
 scipy
 statsmodels
-sklearn
 matplotlib
-matplotlib-inline
+matplotlib-inline 
 seaborn
 gunicorn

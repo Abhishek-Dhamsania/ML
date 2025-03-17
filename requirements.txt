@@ -1,6 +1,9 @@
+pip
+setuptools
+wheel
 psycopg2-binary
 Flask
-numpy
+numpy==1.21.6  # Stable version; adjust if needed
 pickleshare
 pandas
 scikit-learn

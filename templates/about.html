@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>About</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #A2C2E4, #B8D6E7, #D4E9F4);
+            color: #1A3C63;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.1rem;
+            color: #1A3C63;
+        }
+
+        .footer a {
+            color: #A2C2E4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .heading {
+            text-align: center;
+            color: #1A3C63;
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        .content {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            color: #1A3C63;
+            font-size: 1.8rem;
+            margin-top: 30px;
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #1E88E5;
+            color: white;
+        }
+
+        .header .site-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .header .nav-links a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .header .nav-links a:hover {
+            text-decoration: underline;
+        }        
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="site-name">Phone Price Predictor</div>
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5000/">Home</a>
+            <a href="{{url_for('about')}}">lAbout</a>
+            <a href="https://www.linkedin.com/in/abhishek-dhamsania" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <!-- About Page Content -->
+    <div class="container px-5 py-24 mx-auto">
+        <div class="form-container">
+            <div class="heading">
+                <h1>About the Dataset</h1>
+            </div>
+
+            <div class="content">
+                <h2>CONTEXT</h2>
+                <p>The used and refurbished device market has grown considerably over the past decade as it provides cost-effective alternatives to both consumers and businesses that are looking to save money when purchasing one. Maximizing the longevity of devices through second-hand trade also reduces their environmental impact and helps in recycling and reducing waste. Here is a sample dataset of normalized used and new pricing data of refurbished/used devices.</p>
+
+                <h2>OBJECTIVE</h2>
+                <p>The objective is to do Exploratory Data Analytics and apply Linear Regression to create a model which can help in pricing such devices.</p>
+
+                <h2>Variables</h2>
+                <ul>
+                    <li><strong>device_brand</strong>: Name of manufacturing brand</li>
+                    <li><strong>os</strong>: OS on which the device runs</li>
+                    <li><strong>screen_size</strong>: Size of the screen in cm</li>
+                    <li><strong>4g</strong>: Whether 4G is available or not</li>
+                    <li><strong>5g</strong>: Whether 5G is available or not</li>
+                    <li><strong>front_camera_mp</strong>: Resolution of the front camera in megapixels</li>
+                    <li><strong>back_camera_mp</strong>: Resolution of the rear camera in megapixels</li>
+                    <li><strong>internal_memory</strong>: Amount of internal memory (ROM) in GB</li>
+                    <li><strong>ram</strong>: Amount of RAM in GB</li>
+                    <li><strong>battery</strong>: Energy capacity of the device battery in mAh</li>
+                    <li><strong>weight</strong>: Weight of the device in grams</li>
+                    <li><strong>release_year</strong>: Year when the device model was released</li>
+                    <li><strong>days_used</strong>: Number of days the used/refurbished device has been used</li>
+                    <li><strong>normalized_new_price</strong>: Normalized price of a new device of the same model</li>
+                    <li><strong>normalized_used_price (TARGET)</strong>: Normalized price of the used/refurbished device</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Device Price Prediction. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

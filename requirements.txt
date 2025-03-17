@@ -11,6 +11,5 @@ requests
 scipy
 statsmodels
 matplotlib
-matplotlib-inline 
 seaborn
 gunicorn
